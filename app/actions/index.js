@@ -14,6 +14,7 @@ let nextTodoId = 0
  * @param {string} text
  */
 export const addTodo = text => {
+    console.log({ addTodoText: text });
     return {
         type: 'ADD_TODO',
         id: nextTodoId++,

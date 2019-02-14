@@ -40,6 +40,7 @@ class TodoList extends Component {
         let { todos, onTodoClick } = this.props
         const buttons = ['ALL', 'ACTIVE', 'COMPLETE']
         const { selectedIndex } = this.state
+        console.log({ TodoListPropsTodos: todos });
         return (
             <View>
                 <ButtonGroup
@@ -48,13 +49,11 @@ class TodoList extends Component {
                     buttons={buttons}
                 />
                 <ScrollView>
-                    <ListItem containerStyle={{ marginTop: 0 }}>
                         {
                             todos.map(todo => (
                                 <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} />
                             ))
                         }
-                    </ListItem>
                 </ScrollView>
             </View>
         )

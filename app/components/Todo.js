@@ -15,10 +15,9 @@ class Todo extends Component {
         let completeStyle = completed ? { name: "done", color: "green" } : { name: "work" }
         return (
             <ListItem
-                title={text}
-                rightIcon={completeStyle}
-                onPressRightIcon={onClick}
-            />
+            title={text}
+            rightIcon={completeStyle}
+            onPress={onClick}/>
         )
     }
 }
